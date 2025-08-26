@@ -42,6 +42,34 @@ source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
 ```
 
+4. **Rename the example env file to .env to configure your variables:**
+```bash
+mv .env.example .env   # On Windows PowerShell: rename-item .env.example .env
+```
+
+5. **Editing the .env:**
+- On Linux/Mac:
+
+  - Using `nano`:
+  
+    ```bash
+    nano .env
+    ```
+    
+    - Edit the variables as needed.
+    - Press `Ctrl + O` to save, then `Enter` to confirm.
+    - Press `Ctrl + X` to exit.
+
+- On Windows (PowerShell):
+
+  - Using `notepad`:
+  
+    ```powershell
+    notepad .env
+    ```
+    
+    This opens `.env` in Notepad. Edit and save as usual.
+
 ---
 
 ## ⚙️ Environment Variables Setup
