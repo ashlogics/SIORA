@@ -77,11 +77,11 @@ mv .env.example .env   # On Windows PowerShell: rename-item .env.example .env
 To customize SIORA, create a `.env` file in the project root with the following variables, **ENTER YOUR OWN VALUES**:
 
 ```env
-VSCODE_PATH="C:\\\\Users\\\\YourName\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe"
-PYCHARM_PATH="C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.1\\\\bin\\\\pycharm64.exe"
-WEATHER_API="your_openweather_api_key"
-CITY="New York"
-MUSIC_DIR_PATH="C:\\\\Users\\\\YourName\\\\Music"
+VSCODE_PATH=C:\\\\Users\\\\YourName\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe
+PYCHARM_PATH=C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.1\\\\bin\\\\pycharm64.exe
+WEATHER_API=your_openweather_api_key
+CITY=California
+MUSIC_DIR_PATH=C:\\\\Users\\\\YourName\\\\Music
 ```
 
 > ✅ Make sure all paths use **double backslashes** (`\\\\`) on Windows or `/` on Unix-based systems.
