@@ -55,8 +55,8 @@ def takeCommand():
 
 if __name__ == '__main__':
     wishMe()
-    # while True:
-    if 1:
+    while True:
+    # if 1:
         query = takeCommand().lower()
         if "wikipedia" in query:
             speak("Searching Wikipedia...")
@@ -110,4 +110,5 @@ if __name__ == '__main__':
             search = query.replace("search in google", "").strip().replace("about", "").strip()
             speak(f"searching {search} in google...")
             g_search = f"https://www.google.com/search?q={search}"
+
             webbrowser.open(g_search)
