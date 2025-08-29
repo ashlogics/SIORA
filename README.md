@@ -1,8 +1,8 @@
 # 🤖 SIORA – Smart Intelligent Operational Reactive Assistant
 
-Your futuristic, voice-activated Python AI — capable of controlling your apps, fetching real-time info, and making life hands-free.
+Your futuristic, voice-activated Python AI — capable of controlling your apps, fetching real-time info, chatting like a human, and making life hands-free.
 
-> “Hey SIORA, open YouTube” – and it's done.
+> “Hey SIORA, what’s the capital of Brazil?” – it answers instantly.
 
 ---
 
@@ -14,6 +14,7 @@ Your futuristic, voice-activated Python AI — capable of controlling your apps,
 - 🌦️ Get real-time weather updates
 - 🧠 Launch applications like **VS Code** and **PyCharm**
 - 🎵 Music playback from a local folder
+- 💬 **Chat with AI** using natural language (powered by **Cohere**)
 - 🛠️ Fully customizable with environment variables
 
 ---
@@ -42,39 +43,13 @@ source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
 ```
 
-4. **Rename the example env file to .env to configure your variables:**
+4. **Rename the example env file to `.env` to configure your variables:**
+
 ```bash
 mv .env.example .env   # On Windows PowerShell: rename-item .env.example .env
 ```
 
-5. **Editing the .env:**
-- On Linux/Mac:
-
-  - Using `nano`:
-  
-    ```bash
-    nano .env
-    ```
-    
-    - Edit the variables as needed.
-    - Press `Ctrl + O` to save, then `Enter` to confirm.
-    - Press `Ctrl + X` to exit.
-
-- On Windows (PowerShell):
-
-  - Using `notepad`:
-  
-    ```powershell
-    notepad .env
-    ```
-    
-    This opens `.env` in Notepad. Edit and save as usual.
-
----
-
-## ⚙️ Environment Variables Setup
-
-To customize SIORA, create a `.env` file in the project root with the following variables, **ENTER YOUR OWN VALUES**:
+5. **Edit the `.env` file:**
 
 ```env
 VSCODE_PATH=C:\\\\Users\\\\YourName\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\Code.exe
@@ -82,9 +57,8 @@ PYCHARM_PATH=C:\\\\Program Files\\\\JetBrains\\\\PyCharm Community Edition 2023.
 WEATHER_API=your_openweather_api_key
 CITY=California
 MUSIC_DIR_PATH=C:\\\\Users\\\\YourName\\\\Music
+COHERE_API_KEY=your_cohere_api_key
 ```
-
-> ✅ Make sure all paths use **double backslashes** (`\\\\`) on Windows or `/` on Unix-based systems.
 
 ---
 
@@ -100,7 +74,16 @@ SIORA will start listening for your commands. Try saying:
 - `"Search in Google about Python tutorials"`
 - `"What’s the weather today?"`
 - `"Open VS Code"`
-- `"Siora Play music"`
+- `"Siora play music"`
+- `"Siora, what is quantum computing?"`
+
+---
+
+## 💬 Chatbot Integration
+
+SIORA includes a built-in AI chatbot powered by **Cohere’s large language model**. You can ask general knowledge questions, have conversations, or get assistance in a natural, human-like way.
+
+> Just speak as you would to a smart assistant. If the query doesn't match any command, SIORA intelligently responds using Cohere's NLP engine.
 
 ---
 
@@ -109,27 +92,25 @@ SIORA will start listening for your commands. Try saying:
 - `speech_recognition`
 - `pyttsx3`
 - `requests`
+- `wikipedia`
 - `webbrowser`
 - `dotenv`
-- `os`
+- `cohere` 🧠
+
+> Special thanks to [Cohere](https://cohere.com) for powering the AI chatbot experience!
 
 ---
 
 ## 🧪 Example Commands
 
-| 🎙️ Command | 🧠 What SIORA Does |
-|------------|---------------------|
-| Open YouTube | Launches youtube.com in your browser |
-| Search in google about AI | Opens Google with search results for "AI" |
-| What’s the weather? | Tells the weather in your set `CITY` |
-| Open VS Code | Opens the editor at your `VSCODE_PATH` |
-| Play music | Plays music from your `MUSIC_DIR_PATH` |
-
----
-
-## 🧑‍💻 Contributing
-
-Pull requests are welcome! For major changes, please open an issue first.
+| 🎙️ Command                      | 🧠 What SIORA Does                               |
+|-------------------------------|--------------------------------------------------|
+| Open YouTube                  | Launches youtube.com in your browser             |
+| Search in Google about AI     | Opens Google with search results for "AI"        |
+| What’s the weather?           | Tells the weather in your set `CITY`             |
+| Open VS Code                  | Opens the editor at your `VSCODE_PATH`           |
+| Play music                    | Plays music from your `MUSIC_DIR_PATH`           |
+| What is the capital of Japan? | Responds using Cohere’s natural language model   |
 
 ---
 
@@ -139,4 +120,11 @@ This project is open source under the [MIT License](LICENSE).
 
 ---
 
+## 🧑‍💻 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
 > 👨‍💻 Created with ❤️ by [Ashmit](https://github.com/ashlogics).
+
