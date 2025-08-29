@@ -1,5 +1,6 @@
-pyttsx3==2.90
-SpeechRecognition==3.8.1
+pyttsx3==2.99
+SpeechRecognition==3.14.3
 wikipedia==1.4.0
-requests==2.31.0
-python-dotenv==1.0.0
+requests==2.32.4
+python-dotenv==1.1.1
+cohere==5.17.0
